@@ -24,6 +24,8 @@ function displayWeather(response) {
   document.querySelector("#heading-temperature").innerHTML = Math.round(
     response.data.main.temp
   );
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].description;
 }
 
 function searchCity(event) {
