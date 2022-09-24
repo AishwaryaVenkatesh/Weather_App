@@ -35,7 +35,8 @@
 
 #description {
   text-transform: capitalize;
-  color: red;
+  color: white;
+  font-size: 40px;
 }
 
 .temperature {
