@@ -30,10 +30,12 @@
 #cityname {
   color: #0dcaf0;
   text-transform: capitalize;
+  font-weight: bold;
 }
 
 #description {
   text-transform: capitalize;
+  color: red;
 }
 
 .temperature {
