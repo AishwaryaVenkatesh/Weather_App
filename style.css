@@ -29,6 +29,11 @@
 }
 #cityname {
   color: #0dcaf0;
+  text-transform: capitalize;
+}
+
+#description {
+  text-transform: capitalize;
 }
 
 .temperature {
