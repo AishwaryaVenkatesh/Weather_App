@@ -51,6 +51,7 @@ function searchCity(event) {
 
 let searchForm = document.querySelector("#searchLocation");
 searchForm.addEventListener("click", searchCity);
+searchCity("New York");
 
 function showPosition(positon) {
   let latitude = positon.coords.latitude;
