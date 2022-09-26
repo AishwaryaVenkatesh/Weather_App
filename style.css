@@ -28,7 +28,7 @@
 } */
 
 .categories {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 8px;
 }
 #cityname {
@@ -36,7 +36,17 @@
   text-transform: capitalize;
   font-weight: bold;
 }
+#icon {
+  width: 100px;
+}
 
+#tempheading {
+  font-size: 17px;
+  text-decoration: underline;
+  text-decoration-color: orange;
+  color: white;
+  text-align: left;
+}
 #description {
   text-transform: capitalize;
 }

@@ -60,7 +60,7 @@ function changeToC(event) {
 let tempCelsius = document.querySelector("#celsius");
 tempCelsius.addEventListener("click", changeToC);
 
-function searchCity(event) {
+function searchCity() {
   let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
   let city = document.querySelector("#query").value;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
