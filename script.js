@@ -21,10 +21,9 @@ displayTime.innerHTML = `${todaysDay}, ${currentHour}:${currentMinute}`;
 // //UPDATING CITY NAME
 function displayWeather(response) {
   document.querySelector("#cityname").innerHTML = response.data.name;
-  document.querySelector("#heading-temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
-
+  celsiusTemperature = response.data.main.temp;
+  document.querySelector("#heading-temperature").innerHTML =
+    Math.round(celsiusTemperature);
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
 
@@ -41,8 +40,27 @@ function displayWeather(response) {
     );
 }
 
+// SWITCHING TEMP FROM C TO F
+
+function changeToF(event) {
+  let searchTemperature = document.querySelector("#heading-temperature");
+  let tempInF = celsiusTemperature * 1.8 + 32;
+  searchTemperature.innerHTML = Math.round(tempInF);
+}
+let celsiusTemperature = null;
+
+let tempFarenheit = document.querySelector("#fahrenheit");
+tempFarenheit.addEventListener("click", changeToF);
+
+function changeToC(event) {
+  let searchTemperature = document.querySelector("#heading-temperature");
+  let tempInC = celsiusTemperature;
+  searchTemperature.innerHTML = Math.round(tempInC);
+}
+let tempCelsius = document.querySelector("#celsius");
+tempCelsius.addEventListener("click", changeToC);
+
 function searchCity(event) {
-  event.preventDefault();
   let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
   let city = document.querySelector("#query").value;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -51,7 +69,6 @@ function searchCity(event) {
 
 let searchForm = document.querySelector("#searchLocation");
 searchForm.addEventListener("click", searchCity);
-searchCity("Chennai");
 
 function showPosition(positon) {
   let latitude = positon.coords.latitude;
@@ -70,20 +87,4 @@ function getCurrentLocation(event) {
 let currentLocationButton = document.querySelector("#currentLocation");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-//SWITCHING TEMP FROM C TO F
-
-// function changeToF() {
-//   let temperature = document.querySelector(".heading-temperature");
-//   let tempInF = 17 * 1.8 + 32;
-//   temperature.innerHTML = tempInF;
-// }
-// let tempfarenheit = document.querySelector(".fahrenheit");
-// tempfarenheit.addEventListener("click", changeToF);
-
-// function changeToC() {
-//   let temperature = document.querySelector(".heading-temperature");
-//   let tempInC = 17;
-//   temperature.innerHTML = tempInC;
-// }
-// let tempCelsius = document.querySelector(".celsius");
-// tempCelsius.addEventListener("click", changeToC);
+searchCity("Tokyo");
