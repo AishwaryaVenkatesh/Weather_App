@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App</title>
+    <title> ☀ Weather App by Aishwarya</title>
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
@@ -47,7 +47,16 @@
         <div>
           <div class="container text-center section1">
             <div class="row">
-              <div class="col-3 todaystemp">☀<span id="heading-temperature">17</span><sup><a href="#"> <span class="celsius">&#176;C</span>| <span class="fahrenheit">&#176;F</span></a></sup></div>
+              <div class="col-3 todaystemp">
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" id="icon" />
+                <span id="heading-temperature">17</span>
+                <sup>
+                  <a href="#">
+                     <span class="celsius">&#176;C</span>|
+                      <span class="fahrenheit">&#176;F</span>
+                    </a>
+                  </sup>
+                </div>
               <div class="col categories">
                 
                 <p>Humidity: <span id="humidity">35</span>%</p>
@@ -58,7 +67,7 @@
                 <p id="cityname">
                   <strong>New York</strong>
                 </p>
-                <p id="datetime">Sunday 12.00PM</p>
+                <p><span id="datetime">Sunday 12.00PM</span></p>
                 <p id="description">Partly Cloudy</p>
               </div>
             </div>

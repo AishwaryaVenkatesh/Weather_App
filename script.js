@@ -24,6 +24,7 @@ function displayWeather(response) {
   document.querySelector("#heading-temperature").innerHTML = Math.round(
     response.data.main.temp
   );
+
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
 
@@ -31,6 +32,13 @@ function displayWeather(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 }
 
 function searchCity(event) {
