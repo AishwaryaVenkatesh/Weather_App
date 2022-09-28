@@ -41,6 +41,7 @@ function displayWeather(response) {
 }
 
 function searchCity(event) {
+  event.preventDefault();
   let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
   let city = document.querySelector("#query").value;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -48,7 +49,7 @@ function searchCity(event) {
 }
 
 let searchForm = document.querySelector("#searchLocation");
-searchForm.addEventListener("click", searchCity);
+searchForm.addEventListener("submit", searchCity);
 
 function showPosition(positon) {
   let latitude = positon.coords.latitude;
