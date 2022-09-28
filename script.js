@@ -40,27 +40,7 @@ function displayWeather(response) {
     );
 }
 
-// SWITCHING TEMP FROM C TO F
-
-function changeToF(event) {
-  let searchTemperature = document.querySelector("#heading-temperature");
-  let tempInF = celsiusTemperature * 1.8 + 32;
-  searchTemperature.innerHTML = Math.round(tempInF);
-}
-let celsiusTemperature = null;
-
-let tempFarenheit = document.querySelector("#fahrenheit");
-tempFarenheit.addEventListener("click", changeToF);
-
-function changeToC(event) {
-  let searchTemperature = document.querySelector("#heading-temperature");
-  let tempInC = celsiusTemperature;
-  searchTemperature.innerHTML = Math.round(tempInC);
-}
-let tempCelsius = document.querySelector("#celsius");
-tempCelsius.addEventListener("click", changeToC);
-
-function searchCity() {
+function searchCity(event) {
   let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
   let city = document.querySelector("#query").value;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -83,8 +63,38 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(showPosition);
 }
-
 let currentLocationButton = document.querySelector("#currentLocation");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-searchCity("Tokyo");
+// SWITCHING TEMP FROM C TO F
+
+function changeToF(event) {
+  event.preventDefault();
+  let searchTemperature = document.querySelector("#heading-temperature");
+
+  tempCelsius.classList.remove("active");
+  tempFarenheit.classList.add("active");
+
+  let tempInF = celsiusTemperature * 1.8 + 32;
+  searchTemperature.innerHTML = Math.round(tempInF);
+}
+celsiusTemperature = null;
+
+let tempFarenheit = document.querySelector("#fahrenheit");
+tempFarenheit.addEventListener("click", changeToF);
+
+function changeToC(event) {
+  event.preventDefault();
+  let searchTemperature = document.querySelector("#heading-temperature");
+
+  tempCelsius.classList.add("active");
+  tempFarenheit.classList.remove("active");
+
+  searchTemperature.innerHTML = Math.round(celsiusTemperature);
+}
+
+celsiusTemperature = null;
+
+let tempCelsius = document.querySelector("#celsius");
+tempCelsius.addEventListener("click", changeToC);
+// searchCity("New York");

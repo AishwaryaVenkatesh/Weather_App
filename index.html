@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> ☀ Weather App by Aishwarya</title>
+    <title>☀ Weather Today</title>
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
@@ -12,7 +12,7 @@
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,72 +20,77 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    
   </head>
-  <body style="background-color: black;">
-    <div class="containerbody">
-      <div class="col">
+  <body>
+    <div class="body">
+      <h1>WEATHER TODAY</h1>
+      <div class="containerbody">
+        <!-- <div class="col">
         <img src="beach.svg" width="100" />
-      </div></br>
+      </div></br> -->
 
-      <form class="row g-3 section0">
-        <div class="col-auto">
-          <label for="city" class="visually-hidden">CityName</label>
-          <input id="query" type="text"
-            class="form-control"
-            id="inputCity"
-            placeholder="Enter City" 
-            autocomplete="off"
-          />
-        </div>
-        <div class="col-auto">
-          <!-- <button type="submit" class="btn btn-primary mb-3">Submit</button> -->
-          <button type="submit" class="btn btn-info" id= "searchLocation" >Submit</button>
-          <button type="click" class="btn btn-info" id="currentLocation">Current Location</button>
-        </div>
-      </form>
-      <div>
+        <form class="row g-3 section0">
+          <div class="col-auto">
+            <label for="city" class="visually-hidden">CityName</label>
+            <input
+              id="query"
+              type="text"
+              class="form-control"
+              id="inputCity"
+              placeholder="Enter City"
+              autocomplete="off"
+            />
+          </div>
+          <div class="col-auto">
+            <!-- <button type="submit" class="btn btn-primary mb-3">Submit</button> -->
+            <button type="submit" class="btn btn-info" id="searchLocation">
+              Submit
+            </button>
+            <button type="click" class="btn btn-info" id="currentLocation">
+              Current Location
+            </button>
+          </div>
+        </form>
         <div>
-          <div class="container text-center section1">
-            <div class="row">
-              <div class="col-5 todaystemp">
-                <img src="http://openweathermap.org/img/wn/10d@2x.png" id="icon" />
-                 <span id="heading-temperature">17</span>
-                <span >
-                <sup id = "units">
-                  <a href="#" id="celsius">
-                     &#176;C
-                  </a>|
-                  <a href="#" id="fahrenheit">
-                      &#176;F
-                    </a>
-                  </sup>
-                  </span>                
-                  
+          <div>
+            <div class="container text-center section1">
+              <div class="row">
+                <div class="col-5 todaystemp">
+                  <img
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                    id="icon"
+                  />
+                  <span id="heading-temperature">17</span>
+                  <span>
+                    <sup id="units">
+                      <a href="#" id="celsius" class="active"> &#176;C </a>|
+                      <a href="#" id="fahrenheit"> &#176;F </a>
+                    </sup>
+                  </span>
                 </div>
-              <div class="col-3 categories">
-                <p></p>
-                <p>Humidity: <span id="humidity">35</span>%</p>
-                <p>Wind: <span id="wind">11</span>km/hr</p>
+                <div class="col-3 categories">
+                  <p></p>
+                  <p>Humidity: <span id="humidity">35</span>%</p>
+                  <p>Wind: <span id="wind">11</span>km/hr</p>
                 </div>
 
-              <div class="col-3 location">
-                <p id="cityname">
-                  <strong>New York</strong>
-                </p>
-                <p><span id="datetime">Sunday 12.00PM</span></p>
-                <p id="description">Partly Cloudy</p>
+                <div class="col-3 location">
+                  <p id="cityname">
+                    <strong>New York</strong>
+                  </p>
+                  <p><span id="datetime">Sunday 12.00PM</span></p>
+                  <p id="description">Partly Cloudy</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div>
-            <p id = "tempheading">Temperature </p>
-        </div>
+        <!-- <div>
+        <p id="tempheading">Temperature</p>
+      </div> -->
 
-      <div class="container text-center section3">
+        <!-- <div class="container text-center section3">
         <div class="row dayoftheweek">
           <div class="col">Sat</div>
           <div class="col">Sun</div>
@@ -113,16 +118,22 @@
           <div class="col temperature">28&#176; 20&#176;</div>
           <div class="col temperature">29&#176; 21&#176;</div>
         </div>
+      </div> -->
+
+        <p>
+          <a
+            href="https://github.com/AishwaryaVenkatesh/Weather_App"
+            class="designername"
+            >Open-source code</a
+          >by Aishwarya
+        </p>
       </div>
-
-      <p class="designername"><a href="https://github.com/AishwaryaVenkatesh/Weather_App">Open Sourced by Aishwarya Narayanasami</a></p>
     </div>
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
     <script src="script.js"></script>
-      </body>
+  </body>
 </html>
