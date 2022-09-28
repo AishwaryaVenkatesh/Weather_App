@@ -1,3 +1,11 @@
+body {
+  background-color: black;
+}
+
+h1 {
+  padding-top: 30px;
+  text-align: center;
+}
 .section0,
 .section1,
 .section2,
@@ -7,11 +15,17 @@
   color: white;
 }
 .containerbody {
-  background: #202124;
-  margin: 3% 10%;
-  padding: 25px;
-  border: 2px solid #202124;
-  border-radius: 4px;
+  /* background: #202124; */
+  background: linear-gradient(
+    112.1deg,
+    rgb(32, 38, 57) 11.4%,
+    rgb(63, 76, 119) 70.2%
+  );
+  margin: 30px 20% 30px 20%;
+  padding: 30px;
+  border: 1px solid #ced4da;
+  border-radius: 7px;
+  color: antiquewhite;
 }
 
 .todaystemp {
@@ -23,16 +37,22 @@
   line-height: 10px;
 }
 
-/* #units {
-  font-size: 20px;
-} */
+#units .active {
+  color: #f5be48;
+  cursor: default;
+  text-decoration: none;
+}
+
+#units .active:hover {
+  text-decoration: none;
+}
 
 .categories {
   font-size: 16px;
   line-height: 8px;
 }
 #cityname {
-  color: #0dcaf0;
+  color: #f5be48;
   text-transform: capitalize;
   font-weight: bold;
 }
@@ -43,7 +63,7 @@
 #tempheading {
   font-size: 17px;
   text-decoration: underline;
-  text-decoration-color: orange;
+  text-decoration-color: #f5be48;
   color: white;
   text-align: left;
 }
@@ -52,21 +72,13 @@
 }
 
 .temperature {
-  color: orange;
+  color: #f5be48;
 }
 
 .dayoftheweek {
   color: #0dcaf0;
 }
 
-a {
-  text-decoration: none;
-  color: white;
-}
-
-a:hover {
-  color: #0dcaf0;
-}
 /* .section3 {
   border: 2px solid grey;
   border-radius: 8px;
@@ -75,5 +87,17 @@ a:hover {
 .designername {
   padding: 10px;
   text-align: center;
+  color: white;
+}
+
+#searchLocation,
+#currentLocation {
+  background-color: rgb(32, 38, 57);
+  color: #f5be48;
+  border: none;
+}
+
+.designername {
+  text-decoration: none;
   color: white;
 }
