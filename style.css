@@ -82,17 +82,19 @@ h1 {
 .designername {
   padding: 10px;
   text-align: center;
+  text-decoration: none;
   color: white;
 }
 
-#searchLocation,
-#currentLocation {
+#searchLocation {
   background-color: rgb(32, 38, 57);
   color: #f5be48;
   border: none;
 }
 
-.designername {
-  text-decoration: none;
-  color: white;
+#button,
+#currentLocation {
+  background-color: rgb(63, 76, 119);
+  color: #f5be48;
+  border: none;
 }
