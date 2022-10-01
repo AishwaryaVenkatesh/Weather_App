@@ -81,9 +81,10 @@ h1 {
 
 .designername {
   padding: 10px;
-  text-align: center;
+  padding-top: 7px;
+  padding-left: 20%;
   text-decoration: none;
-  color: white;
+  color: rgb(63, 76, 119);
 }
 
 #searchLocation {
@@ -97,4 +98,17 @@ h1 {
   background-color: rgb(63, 76, 119);
   color: #f5be48;
   border: none;
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
 }
