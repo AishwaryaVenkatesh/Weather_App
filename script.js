@@ -67,6 +67,33 @@ function getCurrentLocation(event) {
 let currentLocationButton = document.querySelector("#currentLocation");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
+//FORECAST
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+            <div class="col-2">
+              <div class="weather-forecast-date">${day}</div>
+              <img src="" alt="" width="42" />
+              <div class="weather-forecast-temperatures">
+                <span class="weather-forecast-temperature-max">18&deg;</span>
+                <span class="weather-forecast-temperature-min">12&deg;</span>
+              </div>
+            </div>
+        
+        `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 // SWITCHING TEMP FROM C TO F
 
 function changeToF(event) {
@@ -99,3 +126,4 @@ celsiusTemperature = null;
 let tempCelsius = document.querySelector("#celsius");
 tempCelsius.addEventListener("click", changeToC);
 // searchCity("New York");
+displayForecast();
