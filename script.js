@@ -147,4 +147,4 @@ celsiusTemperature = null;
 
 let tempCelsius = document.querySelector("#celsius");
 tempCelsius.addEventListener("click", changeToC);
-// searchCity("New York");
+searchCity("Tokyo");
