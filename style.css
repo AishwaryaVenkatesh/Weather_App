@@ -1,6 +1,19 @@
+body {
+  background: linear-gradient(
+    112.1deg,
+    rgb(32, 38, 57) 11.4%,
+    rgb(63, 76, 119) 70.2%
+  );
+}
+
 h1 {
   padding-top: 30px;
   text-align: center;
+  color: whitesmoke;
+}
+
+p {
+  color: rgb(63, 76, 119);
 }
 .section0,
 .section1,
@@ -8,19 +21,15 @@ h1 {
 .section3 {
   font-family: "Lato", sans-serif;
   padding: 15px;
-  color: white;
+  color: rgb(63, 76, 119);
 }
 .containerbody {
-  background: linear-gradient(
-    112.1deg,
-    rgb(32, 38, 57) 11.4%,
-    rgb(63, 76, 119) 70.2%
-  );
+  background: white;
   margin: 30px 20% 30px 20%;
   padding: 30px;
   border: 1px solid #ced4da;
   border-radius: 7px;
-  color: antiquewhite;
+  color: rgb(63, 76, 119);
 }
 
 .todaystemp {
@@ -33,7 +42,7 @@ h1 {
 }
 
 #units .active {
-  color: #f5be48;
+  color: rgb(63, 76, 119);
   cursor: default;
   text-decoration: none;
 }
@@ -47,7 +56,7 @@ h1 {
   line-height: 8px;
 }
 #cityname {
-  color: #f5be48;
+  color: rgb(63, 76, 119);
   text-transform: capitalize;
   font-weight: bold;
 }
@@ -58,8 +67,8 @@ h1 {
 #tempheading {
   font-size: 17px;
   text-decoration: underline;
-  text-decoration-color: #f5be48;
-  color: white;
+  color: rgb(63, 76, 119);
+  color: black;
   text-align: left;
 }
 #description {
@@ -67,11 +76,7 @@ h1 {
 }
 
 .temperature {
-  color: #f5be48;
-}
-
-.dayoftheweek {
-  color: #0dcaf0;
+  color: rgb(63, 76, 119);
 }
 
 /* .section3 {
@@ -84,7 +89,7 @@ h1 {
   padding-top: 7px;
   padding-left: 20%;
   text-decoration: none;
-  color: rgb(63, 76, 119);
+  color: whitesmoke;
 }
 
 #searchLocation {
@@ -106,9 +111,4 @@ h1 {
 
 .weather-forecast-date {
   font-size: 16px;
-  opacity: 0.5;
-}
-
-.weather-forecast-temperature-min {
-  opacity: 0.5;
 }
