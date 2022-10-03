@@ -51,16 +51,22 @@ function displayWeather(response) {
   getForecast(response.data.coord);
 }
 
-function searchCity(event) {
-  event.preventDefault();
+function search(city) {
   let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
-  let city = document.querySelector("#query").value;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeather);
 }
 
-let searchForm = document.querySelector("#searchLocation");
-searchForm.addEventListener("submit", searchCity);
+function handlesubmit(event) {
+  event.preventDefault();
+  let city = document.querySelector("#query");
+  search(city.value);
+}
+
+let form = document.querySelector("#searchLocation");
+form.addEventListener("submit", handlesubmit);
+
+search("Vancouver");
 
 function showPosition(positon) {
   let latitude = positon.coords.latitude;
@@ -147,4 +153,3 @@ celsiusTemperature = null;
 
 let tempCelsius = document.querySelector("#celsius");
 tempCelsius.addEventListener("click", changeToC);
-searchCity("Tokyo");
