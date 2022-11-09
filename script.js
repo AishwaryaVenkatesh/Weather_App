@@ -25,7 +25,9 @@ function formatDay(timestamp) {
   return days[day];
 }
 function getForecast(coordinates) {
-  let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
+  // let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
+  let apiKey = "d346d9980b6a0b4e44b6600cc496e4ff";
+
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
@@ -52,7 +54,7 @@ function displayWeather(response) {
 }
 
 function search(city) {
-  let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
+  let apiKey = "d346d9980b6a0b4e44b6600cc496e4ff";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeather);
 }
@@ -71,7 +73,7 @@ search("Vancouver");
 function showPosition(positon) {
   let latitude = positon.coords.latitude;
   let longitude = positon.coords.longitude;
-  let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
+  let apiKey = "d346d9980b6a0b4e44b6600cc496e4ff";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(displayWeather);
