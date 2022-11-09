@@ -112,3 +112,31 @@ p {
 .weather-forecast-date {
   font-size: 16px;
 }
+
+@media (max-width: 650px) {
+  .containerbody {
+    background: #ced4da;
+    margin: 5px;
+    padding: 30px;
+    border: 1px solid #ced4da;
+    border-radius: 7px;
+    color: rgb(63, 76, 119);
+  }
+
+  .location {
+    font-size: 20px;
+  }
+
+  .todaystemp {
+    font-size: 50px;
+  }
+  .categories {
+    font-size: 14px;
+    text-align: left;
+  }
+
+  /* .categories_location {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  } */
+}
